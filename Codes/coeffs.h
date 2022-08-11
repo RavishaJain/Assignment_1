@@ -239,8 +239,7 @@ double x,var=0.0,sum=0.0,var_sum=0.0,mean;
 
 fp = fopen(str,"r");
 //get the numbers from file
-//for (c=getc(fp);c!=EOF;c=getc(fp))
-while(fscanf(fp,"%lf",&x)!=EOF)
+for (c=getc(fp);c!=EOF;c=getc(fp))
        if (c =='\n')
           count=count+1;
 fclose(fp);
@@ -267,9 +266,8 @@ var = var/(i-1);*/
 fclose(fp);
 
 return var;
-
-
 }
+//End of Variance function
 
 //Defining the function for generating Gaussian random numbers
 void gaussian(char *str, int len)
